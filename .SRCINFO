@@ -1,7 +1,7 @@
-pkgbase = slippi-mainline-git
+pkgbase = slippi-mainline
 	pkgdesc = https://slippi.gg/about
 	pkgver = v4.0.0.mainline.beta.4.r0.g4a06679391
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/project-slippi/dolphin
 	arch = x86_64
 	license = GPL2
@@ -50,15 +50,15 @@ pkgbase = slippi-mainline-git
 	depends = zstd
 	optdepends = pulseaudio: PulseAudio backend
 	options = !lto
-	source = slippi-mainline-git::git+https://github.com/project-slippi/dolphin.git#tag=v4.0.0-mainline-beta.4
-	source = slippi-mainline-git-implot::git+https://github.com/epezent/implot.git
-	source = slippi-mainline-git-rcheevos::git+https://github.com/RetroAchievements/rcheevos.git
-	source = slippi-mainline-git-corrosion::git+https://github.com/corrosion-rs/corrosion.git
-	source = slippi-mainline-git-slippi-rust-extensions::git+https://github.com/project-slippi/slippi-rust-extensions.git
-	source = slippi-mainline-git-vma::git+https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
-	source = slippi-mainline-git-enet::git+https://github.com/lsalzman/enet.git
-	source = slippi-mainline-git-cubeb::git+https://github.com/mozilla/cubeb.git
-	source = slippi-mainline-git-sanitizers-cmake::git+https://github.com/arsenm/sanitizers-cmake.git
+	source = slippi-mainline::git+https://github.com/project-slippi/dolphin.git#tag=v4.0.0-mainline-beta.4
+	source = slippi-mainline-implot::git+https://github.com/epezent/implot.git
+	source = slippi-mainline-rcheevos::git+https://github.com/RetroAchievements/rcheevos.git
+	source = slippi-mainline-corrosion::git+https://github.com/corrosion-rs/corrosion.git
+	source = slippi-mainline-slippi-rust-extensions::git+https://github.com/project-slippi/slippi-rust-extensions.git
+	source = slippi-mainline-vma::git+https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
+	source = slippi-mainline-enet::git+https://github.com/lsalzman/enet.git
+	source = slippi-mainline-cubeb::git+https://github.com/mozilla/cubeb.git
+	source = slippi-mainline-sanitizers-cmake::git+https://github.com/arsenm/sanitizers-cmake.git
 	source = slippi-mainline.svg
 	source = slippi-mainline.desktop
 	sha512sums = SKIP
@@ -73,8 +73,8 @@ pkgbase = slippi-mainline-git
 	sha512sums = SKIP
 	sha512sums = SKIP
 
-pkgname = slippi-mainline-git
+pkgname = slippi-mainline
 	pkgdesc = https://slippi.gg/about
 	provides = slippi-mainline
 	conflicts = slippi-mainline
-	conflicts = slippi-online-git
+	conflicts = slippi-online

@@ -1,4 +1,4 @@
-# Maintainer: HamletDuFromage <https://github.com/HamletDuFromage/slippi-mainline-git-PKGBUILD/issues>
+# Maintainer: HamletDuFromage <https://github.com/HamletDuFromage/slippi-mainline-PKGBUILD/issues>
 
 pkgname="slippi-mainline"
 pkgver='v4.0.0.mainline.beta.4.r0.g4a06679391'
