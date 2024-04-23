@@ -1,11 +1,8 @@
 # Maintainer: HamletDuFromage <https://github.com/HamletDuFromage/slippi-mainline-git-PKGBUILD/issues>
 
-_projectname='slippi'
-_mainpkgname="$_projectname-mainline"
-pkgbase="$_mainpkgname-git"
-pkgname=("$pkgbase")
+pkgname="slippi-mainline"
 pkgver='v4.0.0.mainline.beta.4.r0.g4a06679391'
-pkgrel=1
+pkgrel=2
 pkgdesc='https://slippi.gg/about'
 arch=('x86_64')
 url="https://github.com/project-slippi/dolphin"
@@ -65,8 +62,8 @@ source=(
         "$pkgname-enet::git+https://github.com/lsalzman/enet.git"
         "$pkgname-cubeb::git+https://github.com/mozilla/cubeb.git"
         "$pkgname-sanitizers-cmake::git+https://github.com/arsenm/sanitizers-cmake.git"
-        "$_mainpkgname.svg"
-        "$_mainpkgname.desktop"
+        "$pkgname.svg"
+        "$pkgname.desktop"
 )
 sha512sums=('SKIP'
             'SKIP'
@@ -144,12 +141,12 @@ build() {
 
 package() {
         pkgdesc="$pkgdesc"
-        provides=("$_mainpkgname")
-        conflicts=("$_mainpkgname" "slippi-online-git")
+        provides=("$pkgname")
+        conflicts=("$pkgname" "slippi-online")
 
         cd "$srcdir/$_sourcedirectory/"
         make DESTDIR="$pkgdir" -C 'build/' install
-        mv "$pkgdir/usr/local/bin/$_dolphinemu" "$pkgdir/usr/local/bin/$_mainpkgname"
+        mv "$pkgdir/usr/local/bin/$_dolphinemu" "$pkgdir/usr/local/bin/$pkgname"
         cp -r "Data/Sys/" "$pkgdir/usr/local/bin/"
         rm -r "$pkgdir/usr/local/share/man/"
         install -Dm644 'build/cargo/build/x86_64-unknown-linux-gnu/release/libslippi_rust_extensions.so' "$pkgdir/usr/lib/libslippi_rust_extensions.so"
@@ -157,6 +154,6 @@ package() {
         rm -rf "$pkgdir/usr/lib/libdiscord-rpc.a"
 
         mkdir "$pkgdir/usr/local/share/pixmaps/"
-        cp "$srcdir/$_mainpkgname.svg" "$pkgdir/usr/local/share/pixmaps/$_mainpkgname.svg"
-        cp "$srcdir/$_mainpkgname.desktop" "$pkgdir/usr/local/share/applications/$_mainpkgname.desktop"
+        cp "$srcdir/$pkgname.svg" "$pkgdir/usr/local/share/pixmaps/$pkgname.svg"
+        cp "$srcdir/$pkgname.desktop" "$pkgdir/usr/local/share/applications/$pkgname.desktop"
 }
