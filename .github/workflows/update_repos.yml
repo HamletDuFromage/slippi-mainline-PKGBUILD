@@ -73,10 +73,10 @@ jobs:
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
-            git clone ssh://aur@aur.archlinux.org/slippi-mainline-git.git /tmp/aur
+            git clone ssh://aur@aur.archlinux.org/slippi-mainline.git /tmp/aur
             cp {PKGBUILD,.SRCINFO} /tmp/aur/
             cd /tmp/aur
-            git config --global user.name 'HamletDuFromage (github workflow https://github.com/HamletDuFromage/slippi-mainline-git-PKGBUILD)'
+            git config --global user.name 'HamletDuFromage (github workflow https://github.com/HamletDuFromage/slippi-mainline-PKGBUILD)'
             git config --global user.email '61667930+HamletDuFromage@users.noreply.github.com'
             git add PKGBUILD .SRCINFO slippi-mainline.svg slippi-mainline.desktop
             if [[ `git status --porcelain` ]]; then
