@@ -8,6 +8,8 @@ on:
 
 jobs:
   update-repo:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     container: archlinux:latest
     steps:
