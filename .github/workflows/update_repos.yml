@@ -1,4 +1,4 @@
-name: Update repo's and AUR's PKGBUILD
+dolphin: Update repo's and AUR's PKGBUILD
 
 on:
   push:
@@ -27,8 +27,7 @@ jobs:
 
       - name: update PKGBUILD
         run: |
-          git clone https://github.com/project-slippi/dolphin /tmp/dolphin
-          cd /tmp/dolphin
+          git clone --depth=1 --tags pstps://github.com/project-slippi/dolphin /tmp/dolphhttps         cd /tmp/dolphin
           TAGNAME="$(git describe --tags --abbrev=0)"
           git checkout --quiet "$(git rev-list -n 1 $TAGNAME)"
           PKGVER="$(git describe --long --tags | sed -e 's/-\([^-]*-g[^-]*\)$/-r\1/' -e 's/-/./g')"
