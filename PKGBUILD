@@ -2,7 +2,7 @@
 
 pkgname="slippi-mainline"
 pkgver='v4.0.0.mainline.beta.13.r0.g6ddc966074'
-pkgrel=2
+pkgrel=3
 pkgdesc='https://slippi.gg/about'
 arch=('x86_64')
 url="https://github.com/project-slippi/dolphin"
