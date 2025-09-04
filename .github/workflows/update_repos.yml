@@ -27,7 +27,7 @@ jobs:
 
       - name: update PKGBUILD
         run: |
-          git clone --depth=1 --tags https://github.com/project-slippi/dolphin /tmp/dolphin
+          git clone https://github.com/project-slippi/dolphin /tmp/dolphin
           cd /tmp/dolphin
           TAGNAME="$(git describe --tags --abbrev=0)"
           git checkout --quiet "$(git rev-list -n 1 $TAGNAME)"
