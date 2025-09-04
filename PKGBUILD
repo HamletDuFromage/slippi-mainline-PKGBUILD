@@ -61,11 +61,15 @@ source=(
         "$pkgname-vma::git+https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git"
         "$pkgname-enet::git+https://github.com/lsalzman/enet.git"
         "$pkgname-cubeb::git+https://github.com/mozilla/cubeb.git"
+        "$pkgname-tinygltf::git+https://github.com/syoyo/tinygltf.git"
+        "$pkgname-minizip-ng::git+https://github.com/zlib-ng/minizip-ng.git"
         "$pkgname-sanitizers-cmake::git+https://github.com/arsenm/sanitizers-cmake.git"
         "$pkgname.svg"
         "$pkgname.desktop"
 )
 sha512sums=('SKIP'
+            'SKIP'
+            'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -100,6 +104,8 @@ prepare() {
                 [corrosion]='corrosion'
                 [slippi-rust-extensions]='SlippiRustExtensions'
                 [cubeb]='cubeb'
+                [tinygltf]='tinygltf'
+                [minizip-ng]='minizip-ng'
         )
 
         for _submod in "${!_submodules[@]}"; do
